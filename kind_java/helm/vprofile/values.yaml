@@ -1,0 +1,30 @@
+replicaCount: 1
+
+image:
+  vproapp: vprofile/vprofileapp
+  vprodb: vprofile/vprofiledb
+  vpromc: memcached
+  vpromq01: rabbitmq
+  busybox: busybox
+
+secret:
+  dbPass: vprodbpass
+  rmqPass: guest
+
+rmq:
+  defaultUser: guest
+
+service:
+  vproapp:
+    port: 8080
+  vprodb:
+    port: 3306
+  vpromc:
+    port: 11211
+  vpromq01:
+    port: 15672
+
+ingress:
+  host: myapp.test.com
+  ingressClassName: nginx
+  servicePort: 8080

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-app
+spec:
+  ports:
+  - port: {{ .Values.service.vproapp.port }}
+    protocol: TCP
+    targetPort: {{ .Values.service.vproapp.port }}
+  selector:
+    app: vproapp
+  type: ClusterIP
