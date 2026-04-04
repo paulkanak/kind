@@ -25,6 +25,6 @@ service:
     port: 15672
 
 ingress:
-  host: myapp.test.com
+  host: webportal.test.com
   ingressClassName: nginx
   servicePort: 8080
