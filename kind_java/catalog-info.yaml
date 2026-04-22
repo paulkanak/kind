@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: kind-java
+  description: vprofile app implemented in Java in kind cluster
+  # Example for optional annotations
+  annotations:
+   github.com/project-slug: paulkanak/kind/tree/main/kind_java
+spec:
+  type: service
+  owner: development
+  lifecycle: experimental
